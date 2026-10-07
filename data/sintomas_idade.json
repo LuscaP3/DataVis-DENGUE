@@ -1,0 +1,122 @@
+[
+  {
+    "faixa_etaria": "0-9",
+    "total": 54242,
+    "sintomas": {
+      "FEBRE": 48911,
+      "MIALGIA": 27639,
+      "CEFALEIA": 28740,
+      "EXANTEMA": 8685,
+      "VOMITO": 19533,
+      "NAUSEA": 16046,
+      "DOR_COSTAS": 4565,
+      "CONJUNTVIT": 1184,
+      "ARTRITE": 1830,
+      "ARTRALGIA": 3328,
+      "PETEQUIA_N": 5834,
+      "LEUCOPENIA": 2396,
+      "LACO": 733,
+      "DOR_RETRO": 6468
+    }
+  },
+  {
+    "faixa_etaria": "10-19",
+    "total": 81076,
+    "sintomas": {
+      "FEBRE": 71387,
+      "MIALGIA": 60643,
+      "CEFALEIA": 63714,
+      "EXANTEMA": 7743,
+      "VOMITO": 25241,
+      "NAUSEA": 33204,
+      "DOR_COSTAS": 16984,
+      "CONJUNTVIT": 2016,
+      "ARTRITE": 5209,
+      "ARTRALGIA": 10696,
+      "PETEQUIA_N": 5411,
+      "LEUCOPENIA": 3394,
+      "LACO": 1250,
+      "DOR_RETRO": 22461
+    }
+  },
+  {
+    "faixa_etaria": "20-39",
+    "total": 172027,
+    "sintomas": {
+      "FEBRE": 147364,
+      "MIALGIA": 140141,
+      "CEFALEIA": 139442,
+      "EXANTEMA": 14936,
+      "VOMITO": 47070,
+      "NAUSEA": 71326,
+      "DOR_COSTAS": 45435,
+      "CONJUNTVIT": 4628,
+      "ARTRITE": 14924,
+      "ARTRALGIA": 34016,
+      "PETEQUIA_N": 10650,
+      "LEUCOPENIA": 6000,
+      "LACO": 3133,
+      "DOR_RETRO": 56506
+    }
+  },
+  {
+    "faixa_etaria": "40-59",
+    "total": 101877,
+    "sintomas": {
+      "FEBRE": 84510,
+      "MIALGIA": 83113,
+      "CEFALEIA": 80892,
+      "EXANTEMA": 9307,
+      "VOMITO": 23892,
+      "NAUSEA": 41638,
+      "DOR_COSTAS": 29839,
+      "CONJUNTVIT": 2756,
+      "ARTRITE": 10558,
+      "ARTRALGIA": 23371,
+      "PETEQUIA_N": 6510,
+      "LEUCOPENIA": 4266,
+      "LACO": 1817,
+      "DOR_RETRO": 30182
+    }
+  },
+  {
+    "faixa_etaria": "60-79",
+    "total": 38913,
+    "sintomas": {
+      "FEBRE": 30815,
+      "MIALGIA": 30862,
+      "CEFALEIA": 28351,
+      "EXANTEMA": 3008,
+      "VOMITO": 9421,
+      "NAUSEA": 15617,
+      "DOR_COSTAS": 10912,
+      "CONJUNTVIT": 927,
+      "ARTRITE": 3975,
+      "ARTRALGIA": 8305,
+      "PETEQUIA_N": 2092,
+      "LEUCOPENIA": 2135,
+      "LACO": 659,
+      "DOR_RETRO": 8811
+    }
+  },
+  {
+    "faixa_etaria": "80+",
+    "total": 5258,
+    "sintomas": {
+      "FEBRE": 3727,
+      "MIALGIA": 3812,
+      "CEFALEIA": 3156,
+      "EXANTEMA": 348,
+      "VOMITO": 1322,
+      "NAUSEA": 1900,
+      "DOR_COSTAS": 1235,
+      "CONJUNTVIT": 113,
+      "ARTRITE": 432,
+      "ARTRALGIA": 915,
+      "PETEQUIA_N": 237,
+      "LEUCOPENIA": 365,
+      "LACO": 78,
+      "DOR_RETRO": 750
+    }
+  }
+]

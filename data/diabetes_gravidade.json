@@ -1,0 +1,72 @@
+[
+  {
+    "DIABETES": 1,
+    "CLASSI_FIN": null,
+    "quantidade": 995
+  },
+  {
+    "DIABETES": 1,
+    "CLASSI_FIN": 0,
+    "quantidade": 79
+  },
+  {
+    "DIABETES": 1,
+    "CLASSI_FIN": 8,
+    "quantidade": 1883
+  },
+  {
+    "DIABETES": 1,
+    "CLASSI_FIN": 10,
+    "quantidade": 11761
+  },
+  {
+    "DIABETES": 1,
+    "CLASSI_FIN": 11,
+    "quantidade": 817
+  },
+  {
+    "DIABETES": 1,
+    "CLASSI_FIN": 12,
+    "quantidade": 101
+  },
+  {
+    "DIABETES": 2,
+    "CLASSI_FIN": null,
+    "quantidade": 28114
+  },
+  {
+    "DIABETES": 2,
+    "CLASSI_FIN": 0,
+    "quantidade": 4111
+  },
+  {
+    "DIABETES": 2,
+    "CLASSI_FIN": 8,
+    "quantidade": 53800
+  },
+  {
+    "DIABETES": 2,
+    "CLASSI_FIN": 10,
+    "quantidade": 325094
+  },
+  {
+    "DIABETES": 2,
+    "CLASSI_FIN": 11,
+    "quantidade": 10639
+  },
+  {
+    "DIABETES": 2,
+    "CLASSI_FIN": 12,
+    "quantidade": 638
+  },
+  {
+    "DIABETES": 9,
+    "CLASSI_FIN": 0,
+    "quantidade": 4
+  },
+  {
+    "DIABETES": 9,
+    "CLASSI_FIN": 10,
+    "quantidade": 1
+  }
+]

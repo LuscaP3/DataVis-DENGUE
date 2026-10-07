@@ -1,0 +1,207 @@
+[
+  {
+    "CS_GESTANT": 1,
+    "CLASSI_FIN": null,
+    "quantidade": 106
+  },
+  {
+    "CS_GESTANT": 1,
+    "CLASSI_FIN": 0,
+    "quantidade": 17
+  },
+  {
+    "CS_GESTANT": 1,
+    "CLASSI_FIN": 8,
+    "quantidade": 206
+  },
+  {
+    "CS_GESTANT": 1,
+    "CLASSI_FIN": 10,
+    "quantidade": 747
+  },
+  {
+    "CS_GESTANT": 1,
+    "CLASSI_FIN": 11,
+    "quantidade": 40
+  },
+  {
+    "CS_GESTANT": 1,
+    "CLASSI_FIN": 12,
+    "quantidade": 2
+  },
+  {
+    "CS_GESTANT": 2,
+    "CLASSI_FIN": null,
+    "quantidade": 115
+  },
+  {
+    "CS_GESTANT": 2,
+    "CLASSI_FIN": 0,
+    "quantidade": 16
+  },
+  {
+    "CS_GESTANT": 2,
+    "CLASSI_FIN": 8,
+    "quantidade": 280
+  },
+  {
+    "CS_GESTANT": 2,
+    "CLASSI_FIN": 10,
+    "quantidade": 1008
+  },
+  {
+    "CS_GESTANT": 2,
+    "CLASSI_FIN": 11,
+    "quantidade": 32
+  },
+  {
+    "CS_GESTANT": 2,
+    "CLASSI_FIN": 12,
+    "quantidade": 3
+  },
+  {
+    "CS_GESTANT": 3,
+    "CLASSI_FIN": null,
+    "quantidade": 92
+  },
+  {
+    "CS_GESTANT": 3,
+    "CLASSI_FIN": 0,
+    "quantidade": 6
+  },
+  {
+    "CS_GESTANT": 3,
+    "CLASSI_FIN": 8,
+    "quantidade": 218
+  },
+  {
+    "CS_GESTANT": 3,
+    "CLASSI_FIN": 10,
+    "quantidade": 798
+  },
+  {
+    "CS_GESTANT": 3,
+    "CLASSI_FIN": 11,
+    "quantidade": 62
+  },
+  {
+    "CS_GESTANT": 3,
+    "CLASSI_FIN": 12,
+    "quantidade": 5
+  },
+  {
+    "CS_GESTANT": 4,
+    "CLASSI_FIN": null,
+    "quantidade": 50
+  },
+  {
+    "CS_GESTANT": 4,
+    "CLASSI_FIN": 0,
+    "quantidade": 4
+  },
+  {
+    "CS_GESTANT": 4,
+    "CLASSI_FIN": 8,
+    "quantidade": 80
+  },
+  {
+    "CS_GESTANT": 4,
+    "CLASSI_FIN": 10,
+    "quantidade": 566
+  },
+  {
+    "CS_GESTANT": 4,
+    "CLASSI_FIN": 11,
+    "quantidade": 11
+  },
+  {
+    "CS_GESTANT": 5,
+    "CLASSI_FIN": null,
+    "quantidade": 10271
+  },
+  {
+    "CS_GESTANT": 5,
+    "CLASSI_FIN": 0,
+    "quantidade": 1450
+  },
+  {
+    "CS_GESTANT": 5,
+    "CLASSI_FIN": 8,
+    "quantidade": 21423
+  },
+  {
+    "CS_GESTANT": 5,
+    "CLASSI_FIN": 10,
+    "quantidade": 128566
+  },
+  {
+    "CS_GESTANT": 5,
+    "CLASSI_FIN": 11,
+    "quantidade": 4453
+  },
+  {
+    "CS_GESTANT": 5,
+    "CLASSI_FIN": 12,
+    "quantidade": 274
+  },
+  {
+    "CS_GESTANT": 6,
+    "CLASSI_FIN": null,
+    "quantidade": 19213
+  },
+  {
+    "CS_GESTANT": 6,
+    "CLASSI_FIN": 0,
+    "quantidade": 2244
+  },
+  {
+    "CS_GESTANT": 6,
+    "CLASSI_FIN": 8,
+    "quantidade": 39760
+  },
+  {
+    "CS_GESTANT": 6,
+    "CLASSI_FIN": 10,
+    "quantidade": 187021
+  },
+  {
+    "CS_GESTANT": 6,
+    "CLASSI_FIN": 11,
+    "quantidade": 6290
+  },
+  {
+    "CS_GESTANT": 6,
+    "CLASSI_FIN": 12,
+    "quantidade": 426
+  },
+  {
+    "CS_GESTANT": 9,
+    "CLASSI_FIN": null,
+    "quantidade": 2628
+  },
+  {
+    "CS_GESTANT": 9,
+    "CLASSI_FIN": 0,
+    "quantidade": 457
+  },
+  {
+    "CS_GESTANT": 9,
+    "CLASSI_FIN": 8,
+    "quantidade": 5698
+  },
+  {
+    "CS_GESTANT": 9,
+    "CLASSI_FIN": 10,
+    "quantidade": 18104
+  },
+  {
+    "CS_GESTANT": 9,
+    "CLASSI_FIN": 11,
+    "quantidade": 566
+  },
+  {
+    "CS_GESTANT": 9,
+    "CLASSI_FIN": 12,
+    "quantidade": 27
+  }
+]

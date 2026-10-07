@@ -1,0 +1,42 @@
+[
+  {
+    "sexo": "F",
+    "total": 244489,
+    "sintomas": {
+      "FEBRE": 205193,
+      "MIALGIA": 188844,
+      "CEFALEIA": 189353,
+      "EXANTEMA": 25277,
+      "VOMITO": 71447,
+      "NAUSEA": 104745,
+      "DOR_COSTAS": 62392,
+      "CONJUNTVIT": 6317,
+      "ARTRITE": 21112,
+      "ARTRALGIA": 45242,
+      "PETEQUIA_N": 18022,
+      "LEUCOPENIA": 10093,
+      "LACO": 4554,
+      "DOR_RETRO": 69607
+    }
+  },
+  {
+    "sexo": "M",
+    "total": 208508,
+    "sintomas": {
+      "FEBRE": 181311,
+      "MIALGIA": 157195,
+      "CEFALEIA": 154757,
+      "EXANTEMA": 18731,
+      "VOMITO": 54978,
+      "NAUSEA": 74927,
+      "DOR_COSTAS": 46540,
+      "CONJUNTVIT": 5301,
+      "ARTRITE": 15795,
+      "ARTRALGIA": 35354,
+      "PETEQUIA_N": 12695,
+      "LEUCOPENIA": 8447,
+      "LACO": 3111,
+      "DOR_RETRO": 55512
+    }
+  }
+]
