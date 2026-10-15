@@ -227,6 +227,8 @@ def mosaic_plot(titulo, dados, grupos, categorias, cores, tamanho_fonte = 10, fo
     ax.set_xticks(posicoes_grupos)
     ax.set_xticklabels(grupos)
 
+    ax.set_yticks([])
+
     ax.legend(loc = 'center left', bbox_to_anchor = (1.09 if fora else 1.01, 0.5), frameon = False)
 
     plt.title(titulo)
