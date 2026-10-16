@@ -31,7 +31,7 @@ total_masc = masc["total"]
 
 sintomas = ['Febre', 'Mialgia', 'Cefaleia', 'Exantema', 'Vômito', 'Náusea', 'Dor nas costas', 'Conjuntivite', 'Artrite', 'Artralgia', 'Petéquias', 'Leucopenia', 'Prova do laço', 'Dor retro-orbital']
 
-diverging_bar_chart('Variação nos sintomas de acordo com o sexo', dados_masc, 'Masculino', '#8487e8', total_masc, dados_fem, 'Feminino', '#e884cd', total_fem, 4, sintomas, 'Sintomas', arquivo = 'output/diverging_bar_chart.png')
+diverging_bar_chart('Variação nos sintomas de dengue entre homens e mulheres', dados_masc, 'Masculino', '#8487e8', total_masc, dados_fem, 'Feminino', '#e884cd', total_fem, sintomas, arquivo = 'output/diverging_bar_chart.png')
 
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
@@ -48,7 +48,7 @@ for i in range(0, len(sint_idade)):
 cor_min = "#AAE7FA"
 cor_max = "#297991"
 
-mapa_de_calor(grupos, sintomas, dados, totais, cor_max, cor_min, arquivo = 'output/mapa_de_calor.png')
+mapa_de_calor("Variação nos sintomas de dengue em diferentes idades", "Idades" ,grupos, sintomas, dados, totais, cor_max, cor_min, arquivo = 'output/mapa_de_calor.png')
 
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
@@ -110,7 +110,7 @@ for i in grav_diabetes:
 dados = [classificacao_diabetes, classificacao_nao_diabetes]
 cores = ["#aa3b3b", "#3baa4a", "#aaa33b", "#6f3baa", "#423baa"]
 
-mosaic_plot("Agravamento em casos com diabetes", dados, ['Diabéticos', 'Não diabéticos'], ["Grave", "Não grave", "descartado", "Inconclusivo", "outros"], cores, arquivo = 'output/mosaic_plot.png')
+mosaic_plot("Agravamento de casos de dengue em pessoas com diabetes", dados, ['Diabéticos', 'Não diabéticos'], ["Grave", "Não grave", "descartado", "Inconclusivo", "outros"], cores, arquivo = 'output/mosaic_plot.png')
 
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
@@ -195,4 +195,4 @@ for gest in freq_gestantes:
 
 
 
-barras_empilhadas("Agravamento em gestantes", grupos, dados_gravidade, descricao, cores, arquivo = 'output/barras_empilhadas.png')
+barras_empilhadas("Agravamento de casos de dengue em gestantes", grupos, dados_gravidade, descricao, cores, arquivo = 'output/barras_empilhadas.png')

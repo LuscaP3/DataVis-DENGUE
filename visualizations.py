@@ -4,7 +4,7 @@ from matplotlib.patches import Patch
 from matplotlib.colors import to_rgb
 
 
-def diverging_bar_chart(titulo, dados_categoria_a, rotulo_a, cor_a, contagem_total_a, dados_categoria_b, rotulo_b, cor_b, contagem_total_b, intervalos, categorias, rotulo_eixo_y, arquivo = None):
+def diverging_bar_chart(titulo, dados_categoria_a, rotulo_a, cor_a, contagem_total_a, dados_categoria_b, rotulo_b, cor_b, contagem_total_b, categorias, arquivo = None):
 
     maior_valor = min(dados_categoria_a + dados_categoria_b)
     menor_valor = max(dados_categoria_a + dados_categoria_b)
@@ -20,14 +20,14 @@ def diverging_bar_chart(titulo, dados_categoria_a, rotulo_a, cor_a, contagem_tot
     ax.barh(range(0,len(dados_categoria_b)), novos_dados_categoria_b, left = nova_origem + 0.5, height = 0.7, color = cor_b, label = rotulo_b, zorder = 2)
 
 
-    particoes = 100 / intervalos
+    particoes = 100 / 4
     porcentagens = []
     valor_atual = -100
     while valor_atual <= 100:
         porcentagens.append(valor_atual)
         valor_atual = valor_atual + particoes
 
-    xticks_labels = list(map(lambda x: abs(x), porcentagens))
+    xticks_labels = list(map(lambda x: str(int(abs(x))) + "%", porcentagens))
     xticks = list(map(lambda x: nova_origem + x, porcentagens))
 
     ax.set_xticks(xticks)
@@ -41,12 +41,9 @@ def diverging_bar_chart(titulo, dados_categoria_a, rotulo_a, cor_a, contagem_tot
     for i in range(0, qtd_linhas):
         ax.plot([xticks[0], xticks[-1]], [i,i], dashes=[20, 10], linewidth = 0.25, color = "#6B6B6B", zorder = 1)
 
-
-    ax.set_ylabel(rotulo_eixo_y, ha='center', va='center')
-
     ax.legend()
 
-    plt.title(titulo)
+    ax.set_title(titulo, pad=20)
 
     if arquivo is not None:
         fig.savefig(arquivo, dpi = 300, bbox_inches = 'tight')
@@ -57,13 +54,11 @@ def diverging_bar_chart(titulo, dados_categoria_a, rotulo_a, cor_a, contagem_tot
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
 
-def mapa_de_calor(grupos, categorias, valores, totais, cor_max, cor_min, arquivo = None):
+def mapa_de_calor(titulo, rotulo_grupos, grupos, categorias, valores, totais, cor_max, cor_min, arquivo = None):
     gradiente = LinearSegmentedColormap.from_list(
         "meu_gradiente",
         [cor_min, cor_max]
     )
-
-    maior_valor = max(valor for linha in valores for valor in linha)
 
     fig, ax = plt.subplots()
 
@@ -77,6 +72,16 @@ def mapa_de_calor(grupos, categorias, valores, totais, cor_max, cor_min, arquivo
 
     ax.set_yticks(list(map(lambda x: x + 0.5, list(range(0, len(categorias))))))
     ax.set_yticklabels(categorias, rotation=0, ha='right')
+
+    ax.set_xlabel(rotulo_grupos, ha='left', va='center')
+    ax.set_xlabel('Idades')
+
+    # Posiciona o rótulo à direita, abaixo do eixo x
+    ax.xaxis.set_label_coords(1.0, -0.1)
+    ax.xaxis.label.set_horizontalalignment('right')
+
+    ax.set_title(titulo, pad=20)
+    
 
     if arquivo is not None:
         fig.savefig(arquivo, dpi = 300, bbox_inches = 'tight')
@@ -224,14 +229,14 @@ def mosaic_plot(titulo, dados, grupos, categorias, cores, tamanho_fonte = 10, fo
 
         ultimo_y = y_texto
 
+    ax.set_title(titulo, pad=20)
+
     ax.set_xticks(posicoes_grupos)
     ax.set_xticklabels(grupos)
 
     ax.set_yticks([])
 
     ax.legend(loc = 'center left', bbox_to_anchor = (1.09 if fora else 1.01, 0.5), frameon = False)
-
-    plt.title(titulo)
 
     if arquivo is not None:
         fig.savefig(arquivo, dpi = 300, bbox_inches = 'tight')
@@ -283,7 +288,7 @@ def barras_empilhadas(titulo, grupos, dados_grupo, descrição, cores, tamanho_f
         legenda.append(Patch(facecolor = cores[j], label = descrição[j]))
 
     plt.legend(handles = legenda[::-1], bbox_to_anchor = (1.05, 1), loc = 'upper left')
-    plt.title(titulo)
+    ax.set_title(titulo, pad=20)
 
     fig.tight_layout()
 
