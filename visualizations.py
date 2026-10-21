@@ -1,7 +1,10 @@
 import matplotlib.pyplot as plt
-from matplotlib.colors import LinearSegmentedColormap, to_hex
+from matplotlib.colors import LinearSegmentedColormap, to_hex, Normalize
 from matplotlib.patches import Patch
 from matplotlib.colors import to_rgb
+from matplotlib.cm import ScalarMappable
+from matplotlib.ticker import PercentFormatter
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 def diverging_bar_chart(titulo, dados_categoria_a, rotulo_a, cor_a, contagem_total_a, dados_categoria_b, rotulo_b, cor_b, contagem_total_b, categorias, arquivo = None):
@@ -54,40 +57,78 @@ def diverging_bar_chart(titulo, dados_categoria_a, rotulo_a, cor_a, contagem_tot
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
 
-def mapa_de_calor(titulo, rotulo_grupos, grupos, categorias, valores, totais, cor_max, cor_min, arquivo = None):
+def mapa_de_calor(titulo, rotulo_grupos, grupos, categorias, valores, totais,
+                  cor_max, cor_min, rotulo_gradiente, arquivo=None, espaco=0.05, escala=0.6):
+    # espaco: distância entre células, como fração do lado (0.05 = 5% do lado)
+    # escala: polegadas por unidade, controla o tamanho da figura
+
     gradiente = LinearSegmentedColormap.from_list(
         "meu_gradiente",
         [cor_min, cor_max]
     )
 
-    fig, ax = plt.subplots()
+    lado = 1.0                      # largura = altura de cada célula
+    passo = lado + espaco * lado    # distância de uma célula até a próxima
 
-    for i in range(len(categorias)):
-        for j in range(0, len(grupos)):
-            ax.bar([j], [0.95], bottom = i, width = 0.75, color = to_hex(gradiente(valores[j][i] / totais[j])), label = 'rotulo_a', zorder = 2)
+    n_x = len(categorias)           # colunas
+    n_y = len(grupos)               # linhas
 
+    fig, ax = plt.subplots(figsize=(n_x * passo * escala + 2,
+                                    n_y * passo * escala + 1.5))
 
-    ax.set_xticks(range(0, len(grupos)))
-    ax.set_xticklabels(grupos, rotation=0, ha='center')
+    for j in range(len(grupos)):
+        for i in range(len(categorias)):
+            ax.bar(i * passo, lado, bottom=j * passo, width=lado,
+                   color=to_hex(gradiente(valores[j][i] / totais[j])),
+                   zorder=2)
 
-    ax.set_yticks(list(map(lambda x: x + 0.5, list(range(0, len(categorias))))))
-    ax.set_yticklabels(categorias, rotation=0, ha='right')
+    ax.set_aspect('equal')
 
-    ax.set_xlabel(rotulo_grupos, ha='left', va='center')
-    ax.set_xlabel('Idades')
+    # categorias no eixo x: a barra é centrada em i * passo
+    ax.set_xticks([i * passo for i in range(len(categorias))])
+    ax.set_xticklabels(categorias, rotation=45, ha='center')
 
-    # Posiciona o rótulo à direita, abaixo do eixo x
-    ax.xaxis.set_label_coords(1.0, -0.1)
-    ax.xaxis.label.set_horizontalalignment('right')
+    # grupos no eixo y: a barra vai de j * passo até j * passo + lado
+    ax.set_yticks([j * passo + lado / 2 for j in range(len(grupos))])
+    ax.set_yticklabels(grupos, rotation=0, ha='right')
 
+    ax.set_ylabel(rotulo_grupos, loc='top')
     ax.set_title(titulo, pad=20)
     
 
     if arquivo is not None:
-        fig.savefig(arquivo, dpi = 300, bbox_inches = 'tight')
+        fig.savefig(arquivo, dpi=300, bbox_inches='tight')
         plt.close(fig)
     else:
         plt.show()
+
+def adicionar_barra_de_cor(fig, ax, cor_min, cor_max, rotulo,
+                           vmin=0, vmax=1, percentual=True,
+                           tamanho="5%", distancia=0.2):
+    # rotulo: legenda da barra (ex.: "Proporção dentro do grupo")
+    # vmin, vmax: valores que correspondem a cor_min e cor_max
+    # percentual: mostra os números da barra como porcentagem
+    # tamanho: largura da barra, relativa à largura do gráfico
+    # distancia: espaço entre o gráfico e a barra, em polegadas
+
+    gradiente = LinearSegmentedColormap.from_list(
+        "meu_gradiente",
+        [cor_min, cor_max]
+    )
+    mapeamento = ScalarMappable(norm=Normalize(vmin=vmin, vmax=vmax),
+                                cmap=gradiente)
+
+    # cria um eixo ao lado do gráfico com a mesma altura dele
+    eixo_barra = make_axes_locatable(ax).append_axes("right",
+                                                     size=tamanho,
+                                                     pad=distancia)
+    barra = fig.colorbar(mapeamento, cax=eixo_barra)
+    barra.set_label(rotulo, labelpad=10)
+
+    if percentual:
+        barra.ax.yaxis.set_major_formatter(PercentFormatter(xmax=vmax))
+
+    return barra
 
 
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
@@ -236,7 +277,7 @@ def mosaic_plot(titulo, dados, grupos, categorias, cores, tamanho_fonte = 10, fo
 
     ax.set_yticks([])
 
-    ax.legend(loc = 'center left', bbox_to_anchor = (1.09 if fora else 1.01, 0.5), frameon = False)
+    ax.legend(loc = 'center left', bbox_to_anchor = (1.09 if fora else 1.01, 0.5), reverse=True, frameon = False)
 
     if arquivo is not None:
         fig.savefig(arquivo, dpi = 300, bbox_inches = 'tight')

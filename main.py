@@ -48,7 +48,7 @@ for i in range(0, len(sint_idade)):
 cor_min = "#AAE7FA"
 cor_max = "#297991"
 
-mapa_de_calor("Variação nos sintomas de dengue em diferentes idades", "Idades" ,grupos, sintomas, dados, totais, cor_max, cor_min, arquivo = 'output/mapa_de_calor.png')
+mapa_de_calor("Variação nos sintomas de dengue em diferentes idades", "Idades" ,grupos, sintomas, dados, totais, cor_max, cor_min, "Proporção dentro do grupo", arquivo = 'output/mapa_de_calor.png')
 
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
@@ -108,9 +108,10 @@ for i in grav_diabetes:
 
 
 dados = [classificacao_diabetes, classificacao_nao_diabetes]
+descricao = ["Grave", "Não grave", "Descartado", "Inconclusivo", "Outros"]
 cores = ["#aa3b3b", "#3baa4a", "#aaa33b", "#6f3baa", "#423baa"]
 
-mosaic_plot("Agravamento de casos de dengue em pessoas com diabetes", dados, ['Diabéticos', 'Não diabéticos'], ["Grave", "Não grave", "descartado", "Inconclusivo", "outros"], cores, arquivo = 'output/mosaic_plot.png')
+mosaic_plot("Agravamento de casos de dengue em pessoas com diabetes", dados, ['Diabéticos', 'Não diabéticos'], descricao, cores, arquivo = 'output/mosaic_plot.png')
 
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
