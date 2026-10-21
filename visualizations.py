@@ -94,6 +94,8 @@ def mapa_de_calor(titulo, rotulo_grupos, grupos, categorias, valores, totais,
 
     ax.set_ylabel(rotulo_grupos, loc='top')
     ax.set_title(titulo, pad=20)
+
+    adicionar_barra_de_cor(fig, ax, cor_min, cor_max, "Proporção dentro do grupo")
     
 
     if arquivo is not None:
